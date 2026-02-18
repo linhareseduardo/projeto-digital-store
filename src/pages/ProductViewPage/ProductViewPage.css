@@ -1,0 +1,16 @@
+.product-view-page {
+  display: flex;
+  gap: 40px;
+  padding: 40px 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.product-view-page__option-label {
+  font-size: 14px;
+  color: var(--color-dark-gray-2);
+  font-weight: 600;
+  margin-bottom: 8px;
+}

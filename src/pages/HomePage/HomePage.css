@@ -1,0 +1,14 @@
+.home__collections {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home__collection-img {
+  flex: 1;
+  max-width: 420px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
