@@ -56,15 +56,17 @@ const collections = [
   },
 ];
 
+const KSWISS_IMG = 'https://www.figma.com/api/mcp/asset/a1385723-bed7-4e46-9211-501696eb7088';
+
 const featuredProducts = [
-  { name: 'Tênis Esportivo', image: '/product-thumb-1.jpeg', price: 299.9, priceDiscount: 199.9 },
-  { name: 'Camiseta Premium', image: '/product-thumb-2.jpeg', price: 89.9 },
-  { name: 'Calça Jogger', image: '/product-thumb-3.jpeg', price: 179.9, priceDiscount: 139.9 },
-  { name: 'Boné Street', image: '/product-thumb-4.jpeg', price: 59.9 },
-  { name: 'Jaqueta Casual', image: '/product-thumb-5.jpeg', price: 349.9, priceDiscount: 279.9 },
-  { name: 'Mochila Urban', image: '/product-thumb-1.jpeg', price: 199.9, priceDiscount: 149.9 },
-  { name: 'Tênis Retrô', image: '/product-thumb-2.jpeg', price: 259.9 },
-  { name: 'Camiseta Oversize', image: '/product-thumb-3.jpeg', price: 99.9, priceDiscount: 79.9 },
+  { category: 'Tênis', name: 'K-Swiss V8 - Masculino', image: KSWISS_IMG, price: 200, priceDiscount: 100, badge: '30% OFF' },
+  { category: 'Tênis', name: 'K-Swiss V8 - Masculino', image: KSWISS_IMG, price: 200, priceDiscount: 100, badge: '30% OFF' },
+  { category: 'Tênis', name: 'K-Swiss V8 - Masculino', image: KSWISS_IMG, price: 200, priceDiscount: 100 },
+  { category: 'Tênis', name: 'K-Swiss V8 - Masculino', image: KSWISS_IMG, price: 200, priceDiscount: 100 },
+  { category: 'Tênis', name: 'K-Swiss V8 - Masculino', image: KSWISS_IMG, price: 200, priceDiscount: 100 },
+  { category: 'Tênis', name: 'K-Swiss V8 - Masculino', image: KSWISS_IMG, price: 200, priceDiscount: 100 },
+  { category: 'Tênis', name: 'K-Swiss V8 - Masculino', image: KSWISS_IMG, price: 200, priceDiscount: 100 },
+  { category: 'Tênis', name: 'K-Swiss V8 - Masculino', image: KSWISS_IMG, price: 200, priceDiscount: 100 },
 ];
 
 const HomePage = () => {
