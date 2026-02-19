@@ -151,3 +151,99 @@
 .home__offer-btn:hover {
   background-color: var(--color-tertiary);
 }
+
+/* =====================
+   RESPONSIVE — MOBILE
+===================== */
+@media (max-width: 768px) {
+  /* Coleções: coluna única */
+  .home__collections {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  /* Categorias: scroll horizontal — todos numa linha como no Figma mobile */
+  .home__categories {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0;
+    padding: 0 16px 8px;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .home__categories::-webkit-scrollbar {
+    display: none;
+  }
+
+  .home__category-item {
+    flex: 0 0 auto;
+    max-width: none;
+    width: 90px;
+    align-items: center;
+  }
+
+  .home__category-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .home__category-icon-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .home__category-label {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* Oferta especial: empilhando */
+  .home__offer {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 32px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .home__offer-image {
+    flex: unset;
+    width: 300px;
+    height: 300px;
+    overflow: visible;
+  }
+
+  .home__offer-circle {
+    width: 260px;
+    height: 260px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .home__offer-shoe {
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .home__offer-title {
+    font-size: 32px;
+  }
+
+  .home__offer-description {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .home__offer-content {
+    align-items: center;
+  }
+}
