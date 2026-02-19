@@ -54,6 +54,34 @@
   right: 12px;
 }
 
+/* Dots */
+.gallery__dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.gallery__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s;
+}
+
+.gallery__dot--active {
+  background-color: var(--color-primary);
+  width: 24px;
+  border-radius: 5px;
+}
+
 /* Thumbnails */
 .gallery__thumbs {
   display: flex;

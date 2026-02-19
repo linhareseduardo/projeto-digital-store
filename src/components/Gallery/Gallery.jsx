@@ -53,6 +53,17 @@ const Gallery = ({ images = [], width, height, radius, showThumbs, className }) 
         >
           <img src={arrowRight} alt="Próximo" />
         </button>
+
+        <div className="gallery__dots">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              className={`gallery__dot ${i === current ? 'gallery__dot--active' : ''}`}
+              onClick={() => setCurrent(i)}
+              aria-label={`Ir para slide ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
 
       {showThumbs && (
