@@ -10,8 +10,10 @@ const ProductListing = ({ products = [] }) => {
           key={index}
           image={product.image}
           name={product.name}
+          category={product.category}
           price={product.price}
           priceDiscount={product.priceDiscount}
+          badge={product.badge}
         />
       ))}
     </div>
