@@ -3,3 +3,14 @@
   flex-wrap: wrap;
   gap: 24px;
 }
+
+@media (max-width: 768px) {
+  .product-listing {
+    gap: 12px;
+  }
+
+  .product-listing > * {
+    width: calc(50% - 6px);
+    flex-shrink: 0;
+  }
+}
