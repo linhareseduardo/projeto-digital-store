@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './ProductOptions.css';
 
-const ProductOptions = ({ options = [], shape = 'square', type = 'text', radius }) => {
-  const [selected, setSelected] = useState(null);
+const ProductOptions = ({ options = [], shape = 'square', type = 'text', radius, defaultSelected }) => {
+  const [selected, setSelected] = useState(defaultSelected !== undefined ? defaultSelected : null);
 
   return (
     <div className="product-options">

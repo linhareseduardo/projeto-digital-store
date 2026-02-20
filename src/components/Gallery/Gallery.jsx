@@ -14,10 +14,14 @@ const Gallery = ({ images = [], width, height, radius, showThumbs, className }) 
     if (current > 0) setCurrent(current - 1);
   };
 
+  const currentBg = images[current]?.bgColor || '#f5f5f5';
+
   const slideStyle = {
     width: width ? `${width}px` : '100%',
     height: height ? `${height}px` : '400px',
     borderRadius: radius || '0',
+    backgroundColor: currentBg,
+    transition: 'background-color 0.4s ease',
   };
 
   return (
@@ -69,16 +73,24 @@ const Gallery = ({ images = [], width, height, radius, showThumbs, className }) 
       {showThumbs && (
         <div className="gallery__thumbs">
           {images.map((img, i) => (
-            <img
+            <div
               key={i}
-              src={img.src}
-              alt={`Miniatura ${i + 1}`}
-              className={`gallery__thumb ${i === current ? 'gallery__thumb--active' : ''}`}
-              style={{ borderRadius: radius || '0' }}
+              className={`gallery__thumb-wrap ${i === current ? 'gallery__thumb-wrap--active' : ''}`}
+              style={{
+                borderRadius: radius || '4px',
+                backgroundColor: img.bgColor || '#f5f5f5',
+              }}
               onClick={() => setCurrent(i)}
-              width={117}
-              height={95}
-            />
+            >
+              <img
+                src={img.src}
+                alt={`Miniatura ${i + 1}`}
+                className="gallery__thumb"
+                style={{ borderRadius: radius || '4px' }}
+                width={117}
+                height={95}
+              />
+            </div>
           ))}
         </div>
       )}

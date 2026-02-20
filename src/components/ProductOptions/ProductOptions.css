@@ -15,7 +15,13 @@
 }
 
 .product-options__item--selected {
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-primary) !important;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.product-options__item--selected .product-options__text {
+  color: var(--color-white);
 }
 
 /* Square */

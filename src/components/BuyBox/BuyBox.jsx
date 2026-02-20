@@ -4,11 +4,13 @@ import './BuyBox.css';
 
 const BuyBox = ({
   name,
+  tags,
   reference,
   stars,
   rating,
   price,
   priceDiscount,
+  descriptionTitle,
   description,
   children,
 }) => {
@@ -19,20 +21,30 @@ const BuyBox = ({
     <div className="buybox">
       {name && <h1 className="buybox__name">{name}</h1>}
 
-      <div className="buybox__meta">
-        {reference && <span className="buybox__reference">Ref: {reference}</span>}
+      {/* Tags */}
+      {(tags || reference) && (
+        <div className="buybox__tags">
+          {tags && tags.map((tag) => (
+            <span key={tag} className="buybox__tag">{tag}</span>
+          ))}
+          {reference && <span className="buybox__tag">{reference}</span>}
+        </div>
+      )}
 
-        {stars !== undefined && (
-          <span className="buybox__stars">
-            {stars}
-            <img src={starIcon} alt="estrela" className="buybox__star-icon" />
-          </span>
-        )}
-
-        {rating !== undefined && (
-          <span className="buybox__rating">({rating} avaliações)</span>
-        )}
-      </div>
+      {/* Estrelas e avaliações */}
+      {(stars !== undefined || rating !== undefined) && (
+        <div className="buybox__meta">
+          {stars !== undefined && (
+            <span className="buybox__stars">
+              {stars}
+              <img src={starIcon} alt="estrela" className="buybox__star-icon" />
+            </span>
+          )}
+          {rating !== undefined && (
+            <span className="buybox__rating">({rating} avaliações)</span>
+          )}
+        </div>
+      )}
 
       <div className="buybox__pricing">
         {priceDiscount ? (
@@ -45,7 +57,14 @@ const BuyBox = ({
         )}
       </div>
 
-      {description && <p className="buybox__description">{description}</p>}
+      {(descriptionTitle || description) && (
+        <div className="buybox__description-block">
+          {descriptionTitle && (
+            <p className="buybox__description-title">{descriptionTitle}</p>
+          )}
+          {description && <p className="buybox__description">{description}</p>}
+        </div>
+      )}
 
       {children && <div className="buybox__options">{children}</div>}
 
