@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import ProductListingPage from './pages/ProductListingPage/ProductListingPage';
 import ProductViewPage from './pages/ProductViewPage/ProductViewPage';
+import CartPage from './pages/CartPage/CartPage';
 import CategoriesPage from './pages/CategoriesPage/CategoriesPage';
 import OrdersPage from './pages/OrdersPage/OrdersPage';
 
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductListingPage />} />
         <Route path="/product/:id" element={<ProductViewPage />} />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/orders" element={<OrdersPage />} />
       </Routes>

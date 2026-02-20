@@ -1,0 +1,471 @@
+/* ===== LAYOUT PRINCIPAL ===== */
+.cart-page {
+  display: flex;
+  gap: 24px;
+  padding: 40px 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+/* ===== COLUNA ESQUERDA ===== */
+.cart-page__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.cart-page__table {
+  background: #fff;
+  border: 1px solid var(--color-light-gray-3);
+  border-radius: 4px;
+  padding: 24px;
+}
+
+/* Cabeçalho da tabela */
+.cart-page__table-header {
+  display: grid;
+  grid-template-columns: 1fr 180px 140px 140px;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.cart-page__col-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-dark-gray-2);
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+.cart-page__col-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-light-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  text-align: center;
+}
+
+.cart-page__divider {
+  border: none;
+  border-top: 1px solid var(--color-light-gray-3);
+  margin-bottom: 24px;
+}
+
+/* ===== ITEM ===== */
+.cart-page__item {
+  display: grid;
+  grid-template-columns: 1fr 180px 140px 140px;
+  align-items: center;
+  gap: 0;
+}
+
+.cart-page__item-info {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.cart-page__item-thumb {
+  width: 80px;
+  height: 80px;
+  background-color: #e2e3ff;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cart-page__item-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.cart-page__item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cart-page__item-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-dark-gray);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.cart-page__item-meta {
+  font-size: 12px;
+  color: var(--color-light-gray);
+  margin: 0;
+}
+
+/* Quantidade */
+.cart-page__item-qty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-page__qty-controls {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-light-gray-2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cart-page__qty-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark-gray-2);
+  transition: color 0.2s;
+}
+
+.cart-page__qty-btn:hover {
+  color: var(--color-primary);
+}
+
+.cart-page__qty-value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-dark-gray);
+  border-left: 1px solid var(--color-light-gray-2);
+  border-right: 1px solid var(--color-light-gray-2);
+}
+
+.cart-page__remove {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  margin-top: 4px;
+}
+
+/* Preços */
+.cart-page__item-unit,
+.cart-page__item-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.cart-page__price-old {
+  font-size: 12px;
+  color: var(--color-light-gray-2);
+  text-decoration: line-through;
+}
+
+.cart-page__price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark-gray-2);
+}
+
+/* ===== CUPOM + FRETE ===== */
+.cart-page__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.cart-page__field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cart-page__field-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-dark-gray-2);
+}
+
+.cart-page__field-row {
+  display: flex;
+  gap: 8px;
+}
+
+.cart-page__input {
+  flex: 1;
+  height: 40px;
+  border: 1px solid var(--color-light-gray-2);
+  border-radius: 4px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: var(--color-dark-gray-2);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.cart-page__input:focus {
+  border-color: var(--color-primary);
+}
+
+.cart-page__input::placeholder {
+  color: var(--color-light-gray-2);
+}
+
+.cart-page__field-btn {
+  height: 40px;
+  padding: 0 16px;
+  background: none;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cart-page__field-btn:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* ===== RESUMO (coluna direita) ===== */
+.cart-page__summary {
+  width: 280px;
+  flex-shrink: 0;
+  background: #fff;
+  border: 1px solid var(--color-light-gray-3);
+  border-radius: 4px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-page__summary-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-dark-gray-2);
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin: 0;
+}
+
+.cart-page__summary-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-page__summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--color-dark-gray-2);
+}
+
+.cart-page__summary-divider {
+  border: none;
+  border-top: 1px solid var(--color-light-gray-3);
+  margin: 0;
+}
+
+.cart-page__summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-dark-gray);
+}
+
+.cart-page__total-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.cart-page__installments {
+  font-size: 12px;
+  color: var(--color-light-gray);
+  margin: 0;
+  text-align: right;
+}
+
+.cart-page__continue-btn {
+  width: 100%;
+  background-color: var(--color-warning);
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  padding: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+.cart-page__continue-btn:hover {
+  opacity: 0.85;
+}
+
+/* ===== FOOTER MOBILE (oculto no desktop) ===== */
+.cart-page__mobile-footer {
+  display: none;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .cart-page {
+    flex-direction: column;
+    padding: 20px;
+    gap: 0;
+  }
+
+  /* Tabela vira cartão */
+  .cart-page__left {
+    gap: 0;
+  }
+
+  .cart-page__table {
+    border: none;
+    border-bottom: 1px solid var(--color-light-gray-3);
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  .cart-page__table-header {
+    display: none;
+  }
+
+  .cart-page__divider {
+    display: none;
+  }
+
+  /* Item mobile: coluna única */
+  .cart-page__item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cart-page__item-info {
+    gap: 12px;
+  }
+
+  .cart-page__item-thumb {
+    width: 64px;
+    height: 64px;
+  }
+
+  /* Qty label + controls */
+  .cart-page__item-qty {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-page__item-qty::before {
+    content: 'QUANTIDADE';
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-light-gray);
+    letter-spacing: 0.75px;
+  }
+
+  .cart-page__item-unit,
+  .cart-page__item-total {
+    align-items: flex-start;
+  }
+
+  .cart-page__item-unit::before {
+    content: 'UNITÁRIO';
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-light-gray);
+    letter-spacing: 0.75px;
+  }
+
+  .cart-page__item-total::before {
+    content: 'TOTAL';
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-light-gray);
+    letter-spacing: 0.75px;
+  }
+
+  /* Cupom e frete em coluna */
+  .cart-page__fields {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  /* Resumo mobile — exibido inline */
+  .cart-page__summary {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid var(--color-light-gray-3);
+    padding: 20px;
+  }
+
+  /* Botão continuar e total aparecem no footer mobile */
+  .cart-page__summary .cart-page__summary-total,
+  .cart-page__summary .cart-page__installments,
+  .cart-page__summary .cart-page__continue-btn {
+    display: none;
+  }
+
+  .cart-page__mobile-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid var(--color-light-gray-3);
+  }
+
+  .cart-page__mobile-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .cart-page__mobile-total > span:first-child {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-dark-gray);
+  }
+
+  .cart-page__mobile-total .cart-page__total-value {
+    font-size: 20px;
+  }
+
+  .cart-page__mobile-total .cart-page__installments {
+    text-align: right;
+  }
+}

@@ -51,7 +51,7 @@ const Header = () => {
         <div className="header__actions">
           <a href="/register" className="header__register">Cadastre-se</a>
           <a href="/login" className="header__login">Entrar</a>
-          <img src={miniCartIcon} alt="Carrinho" className="header__cart" width={32} height={32} />
+          <img src={miniCartIcon} alt="Carrinho" className="header__cart" width={32} height={32} onClick={() => navigate('/cart')} style={{ cursor: 'pointer' }} />
         </div>
 
         {/* Ícones mobile — só visíveis em telas pequenas */}
@@ -61,7 +61,7 @@ const Header = () => {
               <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
             </svg>
           </button>
-          <div className="header__cart-wrap">
+          <div className="header__cart-wrap" onClick={() => navigate('/cart')} style={{ cursor: 'pointer' }}>
             <img src={miniCartIcon} alt="Carrinho" className="header__cart" width={28} height={28} />
           </div>
         </div>
