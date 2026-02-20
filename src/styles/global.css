@@ -33,3 +33,25 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* ===== INPUT GLOBAL (design system: Light Gray 3 bg, sem borda) ===== */
+input:not([type='checkbox']):not([type='radio']):not([type='range']) {
+  background: var(--color-light-gray-3);
+  border: none;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--color-dark-gray-2);
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+input:not([type='checkbox']):not([type='radio']):not([type='range'])::placeholder {
+  color: var(--color-dark-gray-3);
+  opacity: 0.6;
+}
+
+input:not([type='checkbox']):not([type='radio']):not([type='range']):focus {
+  box-shadow: 0 0 0 2px var(--color-primary);
+}

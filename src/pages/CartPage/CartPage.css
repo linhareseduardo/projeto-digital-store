@@ -245,34 +245,21 @@
 
 .cart-page__input {
   flex: 1;
-  height: 40px;
-  border: 1px solid var(--color-light-gray-2);
-  border-radius: 4px;
-  padding: 0 12px;
+  height: 48px;
   font-size: 14px;
-  color: var(--color-dark-gray-2);
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.cart-page__input:focus {
-  border-color: var(--color-primary);
-}
-
-.cart-page__input::placeholder {
-  color: var(--color-light-gray-2);
 }
 
 .cart-page__field-btn {
-  height: 40px;
-  padding: 0 16px;
+  height: 48px;
+  padding: 0 20px;
   background: none;
-  border: 1px solid var(--color-primary);
-  border-radius: 4px;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 8px;
   color: var(--color-primary);
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+  white-space: nowrap;
   transition: background 0.2s, color 0.2s;
 }
 
