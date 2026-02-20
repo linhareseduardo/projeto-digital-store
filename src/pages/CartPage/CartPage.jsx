@@ -63,22 +63,31 @@ const CartPage = () => {
               </div>
 
               <div className="cart-page__item-qty">
+                <div className="cart-page__qty-header">
+                  <span className="cart-page__qty-label">QUANTIDADE</span>
+                  <button className="cart-page__remove">Remover item</button>
+                </div>
                 <div className="cart-page__qty-controls">
                   <button className="cart-page__qty-btn" onClick={decrease}>−</button>
                   <span className="cart-page__qty-value">{quantity}</span>
                   <button className="cart-page__qty-btn" onClick={increase}>+</button>
                 </div>
-                <button className="cart-page__remove">Remover item</button>
               </div>
 
               <div className="cart-page__item-unit">
-                <span className="cart-page__price-old">{formatPrice(originalPrice)}</span>
-                <span className="cart-page__price">{formatPrice(unitPrice)}</span>
+                <span className="cart-page__item-col-label">UNITÁRIO</span>
+                <div className="cart-page__prices">
+                  <span className="cart-page__price-old">{formatPrice(originalPrice)}</span>
+                  <span className="cart-page__price">{formatPrice(unitPrice)}</span>
+                </div>
               </div>
 
               <div className="cart-page__item-total">
-                <span className="cart-page__price-old">{formatPrice(originalPrice * quantity)}</span>
-                <span className="cart-page__price">{formatPrice(unitPrice * quantity)}</span>
+                <span className="cart-page__item-col-label">TOTAL</span>
+                <div className="cart-page__prices">
+                  <span className="cart-page__price-old">{formatPrice(originalPrice * quantity)}</span>
+                  <span className="cart-page__price">{formatPrice(unitPrice * quantity)}</span>
+                </div>
               </div>
             </div>
           </div>
