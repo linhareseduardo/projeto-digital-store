@@ -6,6 +6,7 @@ import ProductViewPage from './pages/ProductViewPage/ProductViewPage';
 import CartPage from './pages/CartPage/CartPage';
 import CategoriesPage from './pages/CategoriesPage/CategoriesPage';
 import OrdersPage from './pages/OrdersPage/OrdersPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/orders" element={<OrdersPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );
