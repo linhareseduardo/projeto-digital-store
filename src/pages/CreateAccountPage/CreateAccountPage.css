@@ -1,0 +1,208 @@
+/* ===== CREATE ACCOUNT PAGE ===== */
+.create-account {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #F9F8FE;
+}
+
+/* ===== HEADER ===== */
+.create-account__header {
+  background: var(--color-white);
+  padding: 25px 100px;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== MAIN ===== */
+.create-account__main {
+  flex: 1;
+  padding: 70px 100px 80px;
+  max-width: 750px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== TÍTULO ===== */
+.create-account__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 1px;
+  color: var(--color-dark-gray);
+  margin: 0 0 40px 0;
+}
+
+/* ===== FORM ===== */
+.create-account__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ===== CARD BRANCO ===== */
+.create-account__card {
+  background: var(--color-white);
+  border-radius: 4px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.create-account__card-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  color: var(--color-dark-gray-2);
+}
+
+.create-account__divider {
+  border: none;
+  border-top: 1px solid var(--color-light-gray-2);
+  margin: 0;
+}
+
+/* ===== CAMPOS ===== */
+.create-account__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.create-account__label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: var(--color-dark-gray-2);
+}
+
+.create-account__input {
+  height: 60px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+}
+
+/* ===== CHECKBOX ===== */
+.create-account__checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.create-account__checkbox-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.create-account__checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.create-account__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background: var(--color-white);
+  border: 1px solid var(--color-light-gray-2);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.create-account__checkmark svg {
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.create-account__checkbox:checked + .create-account__checkmark {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.create-account__checkbox:checked + .create-account__checkmark svg {
+  opacity: 1;
+}
+
+.create-account__checkbox-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  color: var(--color-dark-gray-2);
+}
+
+/* ===== BOTÃO CRIAR CONTA ===== */
+.create-account__submit-btn {
+  width: 100%;
+  max-width: 750px;
+  height: 40px;
+  background: linear-gradient(180deg, #C92071 0%, #991956 100%);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-light-gray-3);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  align-self: center;
+}
+
+.create-account__submit-btn:hover {
+  opacity: 0.85;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .create-account__header {
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .create-account__main {
+    padding: 30px 30px 60px;
+    max-width: 100%;
+  }
+
+  .create-account__title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .create-account__card {
+    padding: 30px;
+  }
+
+  .create-account__input {
+    height: 60px;
+    font-size: 16px;
+  }
+
+  .create-account__submit-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
