@@ -6,6 +6,7 @@ import ProductViewPage from './pages/ProductViewPage/ProductViewPage';
 import CartPage from './pages/CartPage/CartPage';
 import CategoriesPage from './pages/CategoriesPage/CategoriesPage';
 import OrdersPage from './pages/OrdersPage/OrdersPage';
+import MyInfoPage from './pages/MyInfoPage/MyInfoPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import CreateAccountPage from './pages/CreateAccountPage/CreateAccountPage';
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/orders" element={<OrdersPage />} />
+        <Route path="/my-info" element={<MyInfoPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/create-account" element={<CreateAccountPage />} />

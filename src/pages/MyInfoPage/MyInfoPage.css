@@ -1,0 +1,155 @@
+/* ===== MY INFO PAGE ===== */
+.myinfo-page {
+  background: #F9F8FE;
+}
+
+/* ===== CONTAINER ===== */
+.myinfo-page__container {
+  display: flex;
+  gap: 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 100px;
+  align-items: flex-start;
+}
+
+/* ===== SIDEBAR ===== */
+.myinfo-page__sidebar {
+  width: 334px;
+  flex-shrink: 0;
+  background: var(--color-white);
+  border-radius: 4px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.myinfo-page__sidebar-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  color: var(--color-dark-gray-2);
+  text-align: center;
+}
+
+.myinfo-page__sidebar-divider {
+  border: none;
+  border-top: 1px solid var(--color-light-gray-2);
+  margin: 0;
+}
+
+.myinfo-page__sidebar-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  color: var(--color-dark-gray-2);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.myinfo-page__sidebar-link--active {
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.75px;
+}
+
+/* ===== CONTENT CARD ===== */
+.myinfo-page__content {
+  flex: 1;
+  background: var(--color-white);
+  border-radius: 4px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== HEADER ROW ===== */
+.myinfo-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.myinfo-page__title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  color: var(--color-dark-gray-2);
+}
+
+.myinfo-page__edit-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  color: var(--color-primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.myinfo-page__divider {
+  border: none;
+  border-top: 1px solid var(--color-light-gray-2);
+  margin: 0;
+}
+
+/* ===== INFO SECTION ===== */
+.myinfo-page__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.myinfo-page__section-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: var(--color-dark-gray-2);
+}
+
+/* ===== DATA ROWS ===== */
+.myinfo-page__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+}
+
+.myinfo-page__label {
+  color: var(--color-light-gray);
+  white-space: nowrap;
+}
+
+.myinfo-page__value {
+  color: var(--color-dark-gray);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .myinfo-page__container {
+    flex-direction: column;
+    padding: 30px;
+    gap: 0;
+  }
+
+  /* Hide sidebar on mobile */
+  .myinfo-page__sidebar {
+    display: none;
+  }
+
+  /* Info card mobile */
+  .myinfo-page__content {
+    width: 315px;
+    max-width: 100%;
+    padding: 30px;
+  }
+}
