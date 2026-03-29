@@ -5,7 +5,7 @@ import ProductListing from '../../components/ProductListing/ProductListing';
 import FilterGroup from '../../components/FilterGroup/FilterGroup';
 import './ProductListingPage.css';
 
-const kSwissImg = 'https://www.figma.com/api/mcp/asset/30bf016e-9896-4f02-9266-ba5e42d548e4';
+const kSwissImg = '/produc-image-2.jpeg';
 
 const ALL_PRODUCTS = [
   { name: 'K-Swiss V8 - Masculino', category: 'Tênis', image: kSwissImg, price: 200, priceDiscount: 100, brand: 'K-Swiss', categoryFilter: 'Esporte e lazer', gender: 'Masculino', state: 'Novo' },

@@ -3,7 +3,8 @@ import arrowLeft from '../../assets/arrow-left.svg';
 import arrowRight from '../../assets/arrow-right.svg';
 import './HeroBanner.css';
 
-const ornamentImage = 'https://www.figma.com/api/mcp/asset/db1e4a1e-f929-4b18-940c-2a38ab1b6439';
+const ornamentDesktopImage = '/hero-pattern-desktop.png';
+const ornamentMobileImage = '/hero-pattern-mobile.png';
 
 const slides = [
   {
@@ -12,7 +13,7 @@ const slides = [
     description:
       'Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.',
     btnText: 'Ver Ofertas',
-    image: 'https://www.figma.com/api/mcp/asset/520b8a3e-cc16-4733-bfff-8e44b05ac8d1',
+    image: '/hero-shoe.png',
     imageRotation: '-19.34deg',
   },
   {
@@ -21,7 +22,7 @@ const slides = [
     description:
       'O Mizuno Adventure TrailX é um ícone do estilo casual, com seu design clássico e materiais de alta qualidade. Perfeito para quem busca estilo e conforto.',
     btnText: 'Ver Oferta',
-    image: 'https://www.figma.com/api/mcp/asset/30bf016e-9896-4f02-9266-ba5e42d548e4',
+    image: '/hero-shoe.png',
     imageRotation: '-15deg',
   },
   {
@@ -30,7 +31,7 @@ const slides = [
     description:
       'O Tênis Nike Retrô ClassicSport é conhecido por seu amortecimento responsivo, garantindo conforto e estilo para o seu dia a dia, com um toque esportivo.',
     btnText: 'Ver Oferta',
-    image: 'https://www.figma.com/api/mcp/asset/89df4132-de6e-4f74-a159-1524e08f8c34',
+    image: '/hero-shoe.png',
     imageRotation: '-12deg',
   },
   {
@@ -39,7 +40,7 @@ const slides = [
     description:
       'O Air Jordan combina design lendário com conforto superior. Uma peça de coleção que une estilo e performance em cada passo.',
     btnText: 'Ver Oferta',
-    image: 'https://www.figma.com/api/mcp/asset/6938f888-9f2a-476c-86c4-48903879c62e',
+    image: '/hero-shoe.png',
     imageRotation: '-10deg',
   },
 ];
@@ -90,8 +91,8 @@ const HeroBanner = () => {
 
   return (
     <section className="hero-banner">
-      {/* Ornamento pontinhos top-right */}
-      <img src={ornamentImage} alt="" className="hero-banner__ornament" aria-hidden="true" />
+      <img src={ornamentDesktopImage} alt="" className="hero-banner__ornament hero-banner__ornament--desktop" aria-hidden="true" />
+      <img src={ornamentMobileImage} alt="" className="hero-banner__ornament hero-banner__ornament--mobile" aria-hidden="true" />
 
       {/* Conteúdo lado esquerdo */}
       <div className={`hero-banner__content ${animating ? 'hero-banner__content--fade' : ''}`}>

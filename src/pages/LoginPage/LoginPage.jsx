@@ -4,7 +4,7 @@ import Logo from '../../components/Logo/Logo';
 import Footer from '../../components/Footer/Footer';
 import './LoginPage.css';
 
-const SHOE_IMG = 'https://www.figma.com/api/mcp/asset/6a9061fc-fdf7-4873-8de2-c25abf10620b';
+const SHOE_IMG = '/produc-image-3.jpeg';
 
 const LoginPage = () => {
   const [login, setLogin] = useState('');

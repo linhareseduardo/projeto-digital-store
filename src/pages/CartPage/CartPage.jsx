@@ -5,8 +5,8 @@ import Section from '../../components/Section/Section';
 import ProductListing from '../../components/ProductListing/ProductListing';
 import './CartPage.css';
 
-const NIKE_SHOE = 'https://www.figma.com/api/mcp/asset/97a1c703-207b-4448-920b-c6d12658c6b5';
-const KSWISS_IMG = 'https://www.figma.com/api/mcp/asset/a1385723-bed7-4e46-9211-501696eb7088';
+const NIKE_SHOE = '/produc-image-1.jpeg';
+const KSWISS_IMG = '/produc-image-2.jpeg';
 
 const relatedProducts = [
   { category: 'Tênis', name: 'K-Swiss V8 - Masculino', image: KSWISS_IMG, price: 200, priceDiscount: 100, badge: '30% OFF' },

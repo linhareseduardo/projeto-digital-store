@@ -4,7 +4,7 @@ import Logo from '../../components/Logo/Logo';
 import Footer from '../../components/Footer/Footer';
 import './RegisterPage.css';
 
-const SHOE_IMG = 'https://www.figma.com/api/mcp/asset/b6f8c70e-9bc5-43e6-aebc-9e350bf78403';
+const SHOE_IMG = '/produc-image-4.jpeg';
 
 const RegisterPage = () => {
   const [email, setEmail] = useState('');
