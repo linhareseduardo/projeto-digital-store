@@ -1,3 +1,75 @@
+# Guia para Rodar o Projeto
+
+Este projeto foi criado com React (Create React App) e pode ser executado localmente com poucos comandos.
+
+## 1. Pré-requisitos
+
+- Node.js 18 ou superior
+- npm 9 ou superior (normalmente já vem com o Node.js)
+
+Para conferir no terminal:
+
+```bash
+node -v
+npm -v
+```
+
+## 2. Instalação
+
+Na pasta raiz do projeto, instale as dependências:
+
+```bash
+npm install
+```
+
+## 3. Rodar em modo de desenvolvimento
+
+Ainda na raiz do projeto, execute:
+
+```bash
+npm start
+```
+
+Depois abra no navegador:
+
+```text
+http://localhost:3000
+```
+
+O React recarrega automaticamente quando você salva alterações nos arquivos.
+
+## 4. Gerar build de produção
+
+Para criar a versão otimizada do projeto:
+
+```bash
+npm run build
+```
+
+Os arquivos gerados ficam na pasta `build/`.
+
+## 5. Scripts disponíveis
+
+- `npm start`: inicia o servidor de desenvolvimento
+- `npm run build`: gera build de produção
+
+## 6. Problemas comuns
+
+- Porta 3000 em uso:
+  - Feche o processo que está usando a porta ou aceite rodar em outra porta quando o terminal perguntar.
+- Erro de dependências após atualizar o projeto:
+  - apague `node_modules` e `package-lock.json`, depois rode `npm install` novamente.
+- Comando npm não reconhecido:
+  - reinstale o Node.js e abra um novo terminal.
+
+## 7. Estrutura principal
+
+- `src/`: código-fonte (componentes, páginas e estilos)
+- `public/`: arquivos públicos e estáticos
+- `build/`: saída da build de produção
+
+---
+
 # 1 - Sugestão para estrutura de pastas
 
 - Com o objetivo de organizar o projeto estruture o projeto de modo que dentro da pasta "src" existam as pastas dos componentes chamada `components` e a pasta de paginas chamada `pages`. Na pasta `components` devem ser criados os componentes funcionais do projeto e na `pasta` page deve conter cada aba da pagina da loja `drip-store`, contendo somente a chamada dos componentes criados. Essa organização facilitará a criação de rotas dentro do arquivo `App.js`.
